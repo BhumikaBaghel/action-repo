@@ -1,0 +1,104 @@
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-weight: 500;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #7f8c8d;
+    font-size: 0.9em;
+}
+
+.feed {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-left: 5px solid #bdc3c7;
+    transition: transform 0.2s;
+    animation: fadeIn 0.5s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card.push {
+    border-left-color: #3498db; /* Blue for Push */
+}
+
+.card.pr {
+    border-left-color: #f1c40f; /* Yellow for PR */
+}
+
+.card.merge {
+    border-left-color: #e74c3c; /* Red for Merge */ /* Brownie points */
+}
+
+.card-text {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.author {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.branch {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #ecf0f1;
+    padding: 2px 5px;
+    border-radius: 4px;
+    color: #c0392b;
+}
+
+.timestamp {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.85em;
+    color: #95a5a6;
+    text-align: right;
+}
+
+.loading {
+    text-align: center;
+    color: #95a5a6;
+    font-style: italic;
+    padding: 20px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
